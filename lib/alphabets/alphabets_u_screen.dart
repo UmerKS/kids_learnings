@@ -31,7 +31,7 @@ class _AlphabetsUScreenState extends State<AlphabetsUScreen> {
   void initState() {
     super.initState();
     initializeTts();
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _flutterTts.speak("Letter U");
     });
   }
@@ -67,8 +67,7 @@ class _AlphabetsUScreenState extends State<AlphabetsUScreen> {
                   color: Colors.grey,
                   child: TextButton.icon(
                     style: TextButton.styleFrom(
-                      fixedSize: const Size(250, 40),
-                      primary: Colors.black,
+                      foregroundColor: Colors.black, fixedSize: const Size(250, 40),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)),
                     ),
@@ -93,8 +92,7 @@ class _AlphabetsUScreenState extends State<AlphabetsUScreen> {
                   color: Colors.orangeAccent,
                   child: TextButton.icon(
                     style: TextButton.styleFrom(
-                      fixedSize: const Size(250, 40),
-                      primary: Colors.black,
+                      foregroundColor: Colors.black, fixedSize: const Size(250, 40),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)),
                     ),
@@ -124,7 +122,7 @@ class _AlphabetsUScreenState extends State<AlphabetsUScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Container(
+              SizedBox(
                 height: 240.0,
                 width: 350.0,
                 /*decoration:
@@ -133,7 +131,7 @@ class _AlphabetsUScreenState extends State<AlphabetsUScreen> {
                   child: _textLiquidFill(),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 90.0,
                 width: 350.0,
                 /*decoration:
@@ -142,7 +140,7 @@ class _AlphabetsUScreenState extends State<AlphabetsUScreen> {
                   child: _aForApple1(),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 80.0,
                 width: 350.0,
                 /*decoration:
@@ -151,7 +149,7 @@ class _AlphabetsUScreenState extends State<AlphabetsUScreen> {
                   child: _aForApple2(),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 80.0,
                 width: 350.0,
                 /*decoration:
@@ -160,7 +158,7 @@ class _AlphabetsUScreenState extends State<AlphabetsUScreen> {
                   child: _aForApple3(),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 80.0,
                 width: 350.0,
                 /*decoration:

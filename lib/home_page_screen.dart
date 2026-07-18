@@ -28,7 +28,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Container(
+                  SizedBox(
                     height: 300.0,
                     width: 350.0,
                     child: Center(

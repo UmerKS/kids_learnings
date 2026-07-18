@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import './alphabets_a_screen.dart';
+import 'alphabets_screen.dart';
 import './alphabets_c_screen.dart';
 
 class AlphabetsBScreen extends StatefulWidget {
@@ -31,7 +31,7 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
   void initState() {
     super.initState();
     initializeTts();
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _flutterTts.speak("Letter B");
     });
   }
@@ -52,6 +52,9 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
     await _flutterTts.speak("B for " +text);
   }
 
+  Future _speakMainWord(String textmainword) async {
+    await _flutterTts.speak(textmainword);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,8 +70,7 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
                   color: Colors.grey,
                   child: TextButton.icon(
                     style: TextButton.styleFrom(
-                      fixedSize: const Size(250, 40),
-                      primary: Colors.black,
+                      foregroundColor: Colors.black, fixedSize: const Size(250, 40),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)),
                     ),
@@ -79,10 +81,10 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
                       size: 24.0,
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const AlphabetsAScreen()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => const AlphabetsAScreen()),
+                      // );
                     },
                   ),
                 ),
@@ -93,8 +95,7 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
                   color: Colors.orangeAccent,
                   child: TextButton.icon(
                     style: TextButton.styleFrom(
-                      fixedSize: const Size(250, 40),
-                      primary: Colors.black,
+                      foregroundColor: Colors.black, fixedSize: const Size(250, 40),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)),
                     ),
@@ -124,7 +125,7 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Container(
+              SizedBox(
                 height: 240.0,
                 width: 350.0,
                 /*decoration:
@@ -133,7 +134,7 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
                   child: _textLiquidFill(),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 90.0,
                 width: 350.0,
                 /*decoration:
@@ -142,7 +143,7 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
                   child: _aForApple1(),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 80.0,
                 width: 350.0,
                 /*decoration:
@@ -151,7 +152,7 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
                   child: _aForApple2(),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 80.0,
                 width: 350.0,
                 /*decoration:
@@ -160,7 +161,7 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
                   child: _aForApple3(),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 80.0,
                 width: 350.0,
                 /*decoration:
@@ -311,14 +312,19 @@ class _AlphabetsBScreenState extends State<AlphabetsBScreen> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Center(
-            child: TextLiquidFill(
-              text: letterWord,
-              waveDuration: const Duration(seconds: 5),
-              waveColor: Colors.orangeAccent,
-              boxBackgroundColor: Colors.white,
-              textStyle: const TextStyle(
-                fontSize: 165.0,
-                fontWeight: FontWeight.bold,
+            child: GestureDetector(
+              onTap: () {
+                _speakMainWord("B");
+              },
+              child: TextLiquidFill(
+                text: letterWord,
+                waveDuration: const Duration(seconds: 5),
+                waveColor: Colors.orangeAccent,
+                boxBackgroundColor: Colors.white,
+                textStyle: const TextStyle(
+                  fontSize: 165.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),

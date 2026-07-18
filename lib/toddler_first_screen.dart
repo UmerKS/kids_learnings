@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './alphabets/alphabets_a_screen.dart';
+import 'package:kids_learnings/alphabets/alphabets_grid_screen.dart';
+
 
 class ToddlerFirstScreen extends StatefulWidget {
   const ToddlerFirstScreen({Key? key}) : super(key: key);
@@ -24,17 +25,15 @@ class _ToddlerFirstScreenState extends State<ToddlerFirstScreen> {
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      foregroundColor: Colors.orangeAccent, textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold), backgroundColor: Colors.white70,
                       fixedSize: const Size(250, 50),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50)),
-                      primary: Colors.white70,
-                      onPrimary: Colors.orangeAccent,// Background color
+                          borderRadius: BorderRadius.circular(50)),// Background color
                     ),
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const AlphabetsAScreen()),
+                        MaterialPageRoute(builder: (context) => const AlphabetsGridScreen()),
                       );
                     },
                     child: const Text('Alphabets'),
@@ -42,12 +41,10 @@ class _ToddlerFirstScreenState extends State<ToddlerFirstScreen> {
                   const SizedBox(height: 8.0),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      foregroundColor: Colors.orangeAccent, textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold), backgroundColor: Colors.white70,
                       fixedSize: const Size(250, 50),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50)),
-                      primary: Colors.white70,
-                      onPrimary: Colors.orangeAccent,// Background color
+                          borderRadius: BorderRadius.circular(50)),// Background color
                     ),
                     onPressed: () {
                       // Respond to button press
@@ -57,12 +54,10 @@ class _ToddlerFirstScreenState extends State<ToddlerFirstScreen> {
                   const SizedBox(height: 8.0),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      foregroundColor: Colors.orangeAccent, textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold), backgroundColor: Colors.white70,
                       fixedSize: const Size(250, 50),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50)),
-                      primary: Colors.white70,
-                      onPrimary: Colors.orangeAccent,// Background color
+                          borderRadius: BorderRadius.circular(50)),// Background color
                     ),
                     onPressed: () {
                       // Respond to button press
@@ -72,17 +67,15 @@ class _ToddlerFirstScreenState extends State<ToddlerFirstScreen> {
                   const SizedBox(height: 8.0),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                      foregroundColor: Colors.orangeAccent, textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold), backgroundColor: Colors.white70,
                       fixedSize: const Size(250, 50),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50)),
-                      primary: Colors.white70,
-                      onPrimary: Colors.orangeAccent,// Background color
+                          borderRadius: BorderRadius.circular(50)),// Background color
                     ),
                     onPressed: () {
                       // Respond to button press
                     },
-                    child: Text("Shapes"),
+                    child: const Text("Shapes"),
                   ),
                 ],
               )),

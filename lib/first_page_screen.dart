@@ -93,12 +93,10 @@ class _FirstPageScreenState extends State<FirstPageScreen> with SingleTickerProv
         children: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              foregroundColor: Colors.orangeAccent, textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold), backgroundColor: Colors.white70,
               fixedSize: const Size(250, 50),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50)),
-              primary: Colors.white70,
-              onPrimary: Colors.orangeAccent,// Background color
+                  borderRadius: BorderRadius.circular(50)),// Background color
             ),
             onPressed: () {
               Navigator.push(
@@ -111,12 +109,10 @@ class _FirstPageScreenState extends State<FirstPageScreen> with SingleTickerProv
           const SizedBox(height: 8.0),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              foregroundColor: Colors.orangeAccent, textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold), backgroundColor: Colors.white70,
               fixedSize: const Size(250, 50),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50)),
-              primary: Colors.white70,
-              onPrimary: Colors.orangeAccent,// Background color
+                  borderRadius: BorderRadius.circular(50)),// Background color
             ),
             onPressed: () {
               // Respond to button press

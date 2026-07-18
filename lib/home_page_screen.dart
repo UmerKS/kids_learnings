@@ -6,6 +6,7 @@ class HomePageScreen extends StatefulWidget {
   const HomePageScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _HomePageScreenState createState() => _HomePageScreenState();
 }
 

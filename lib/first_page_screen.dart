@@ -5,6 +5,7 @@ class FirstPageScreen extends StatefulWidget {
   const FirstPageScreen({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _FirstPageScreenState createState() => _FirstPageScreenState();
 }
 
@@ -141,6 +142,7 @@ class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _MenuState createState() => _MenuState();
 }
 

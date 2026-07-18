@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './toddler_first_screen.dart';
 
 class FirstPageScreen extends StatefulWidget {
-  const FirstPageScreen({Key? key}) : super(key: key);
+  const FirstPageScreen({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -139,7 +139,7 @@ class _FirstPageScreenState extends State<FirstPageScreen> with SingleTickerProv
 }
 
 class Menu extends StatefulWidget {
-  const Menu({Key? key}) : super(key: key);
+  const Menu({super.key});
 
   @override
   // ignore: library_private_types_in_public_api

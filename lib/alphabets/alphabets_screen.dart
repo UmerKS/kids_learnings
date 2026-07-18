@@ -200,7 +200,7 @@ import 'package:kids_learnings/model/alphabet_data.dart';
 class AlphabetScreen extends StatefulWidget {
   final int index;
 
-  const AlphabetScreen({Key? key, this.index = 0}) : super(key: key);
+  const AlphabetScreen({super.key, this.index = 0});
 
   @override
   State<AlphabetScreen> createState() => _AlphabetScreenState();

@@ -5,7 +5,7 @@ import 'package:kids_learnings/model/alphabet_data.dart';
 
 
 class AlphabetsGridScreen extends StatefulWidget {
-  const AlphabetsGridScreen({Key? key}) : super(key: key);
+  const AlphabetsGridScreen({super.key});
 
   @override
   State<AlphabetsGridScreen> createState() => _AlphabetsGridScreenState();

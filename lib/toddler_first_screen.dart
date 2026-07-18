@@ -3,9 +3,10 @@ import 'package:kids_learnings/alphabets/alphabets_grid_screen.dart';
 
 
 class ToddlerFirstScreen extends StatefulWidget {
-  const ToddlerFirstScreen({Key? key}) : super(key: key);
+  const ToddlerFirstScreen({super.key});
 
   @override
+  
   // ignore: library_private_types_in_public_api
   _ToddlerFirstScreenState createState() => _ToddlerFirstScreenState();
 }

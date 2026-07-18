@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import './first_page_screen.dart';
 
 class HomePageScreen extends StatefulWidget {
-  const HomePageScreen({Key? key}) : super(key: key);
+  
+  const HomePageScreen({super.key});
 
   @override
+
   // ignore: library_private_types_in_public_api
   _HomePageScreenState createState() => _HomePageScreenState();
 }
